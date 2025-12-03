@@ -10,7 +10,7 @@
     --primary-color: #355d5dff;      /* Giga-42 Green */
     --secondary-color: #1565C0;    /* Ocean Blue */
     --accent-color: #FF8F00;       /* Solar Orange */
-    --light-green: #4CAF50;        /* Light Green */
+    --light-green: #82a5a2;        /* Light Green */
     --dark-blue: #0D47A1;          /* Dark Blue */
     --gray-100: #F8F9FA;           /* Light Gray */
     --gray-200: #E9ECEF;           /* Medium Light Gray */
@@ -481,7 +481,7 @@ section {
 }
 
 .project-card.iceland .project-image {
-    background: linear-gradient(45deg, #4CAF50, #2E7D32);
+    background: linear-gradient(45deg, #82a5a2, #355d5dff);
 }
 
 .project-card.sweden .project-image {
