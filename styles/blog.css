@@ -714,3 +714,205 @@
         font-size: 2rem;
     }
 }
+
+/* Iceland Data Center Hero Section */
+.iceland-hero {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1a5f7a 0%, #2d7a8f 50%, #1a1a1a 100%);
+    overflow: hidden;
+    color: white;
+}
+
+.iceland-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.iceland-hero .hero-overlay-pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.iceland-hero .project-hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 4rem;
+}
+
+.iceland-hero .hero-text-block {
+    flex: 1;
+    max-width: 600px;
+}
+
+.iceland-hero .project-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -1px;
+}
+
+.iceland-hero .project-subtitle {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    line-height: 1.6;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+}
+
+.iceland-hero .hero-logo-block {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.iceland-hero .hero-giga-logo {
+    width: clamp(150px, 20vw, 300px);
+    height: auto;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .iceland-hero {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding: 3rem 1.5rem;
+    }
+    
+    .iceland-hero .project-hero-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .iceland-hero .hero-text-block {
+        max-width: 100%;
+    }
+    
+    .iceland-hero .hero-logo-block {
+        justify-content: center;
+    }
+}
+
+/* Nordic Expansion Hero Section */
+.nordic-hero {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1a5f7a 0%, #2d7a8f 50%, #1a1a1a 100%);
+    overflow: hidden;
+    color: white;
+}
+
+.nordic-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.nordic-hero .hero-overlay-pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.nordic-hero .project-hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 4rem;
+}
+
+.nordic-hero .hero-text-block {
+    flex: 1;
+    max-width: 600px;
+}
+
+.nordic-hero .project-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -1px;
+}
+
+.nordic-hero .project-subtitle {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    line-height: 1.6;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+}
+
+.nordic-hero .hero-logo-block {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nordic-hero .hero-giga-logo {
+    width: clamp(150px, 20vw, 300px);
+    height: auto;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .nordic-hero {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding: 3rem 1.5rem;
+    }
+    
+    .nordic-hero .project-hero-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .nordic-hero .hero-text-block {
+        max-width: 100%;
+    }
+    
+    .nordic-hero .hero-logo-block {
+        justify-content: center;
+    }
+}
