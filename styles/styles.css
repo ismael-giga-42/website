@@ -449,6 +449,59 @@ section {
     font-weight: bold;
 }
 
+/* Nordic Platform Section */
+.nordic-platform {
+    background: var(--white);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.pillar-card {
+    background: var(--white);
+    border: 2px solid rgba(53, 93, 93, 0.15);
+    border-radius: 16px;
+    padding: 3rem;
+    transition: var(--transition);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 16px 16px 0 0;
+}
+
+.pillar-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(53, 93, 93, 0.2);
+    border-color: var(--primary-color);
+}
+
+.pillar-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+}
+
+.pillar-card p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
 /* Projects Section */
 .projects {
     background: var(--gray-100);
@@ -1114,7 +1167,7 @@ section {
 
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
