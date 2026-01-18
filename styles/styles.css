@@ -152,7 +152,7 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
+    height: clamp(400px, 80vh, 700px);
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -500,6 +500,26 @@ section {
     color: var(--gray-600);
     font-size: 0.95rem;
     line-height: 1.8;
+}
+
+/* Portfolio Map Section */
+.portfolio-map {
+    background: var(--white);
+    padding: 5rem 0;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.nordic-map-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    display: block;
 }
 
 /* Projects Section */
