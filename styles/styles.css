@@ -652,10 +652,6 @@ section {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-.news-card.featured {
-    grid-column: span 2;
-}
-
 .news-image {
     height: 200px;
     background: linear-gradient(45deg, var(--primary-color), var(--light-green));
