@@ -251,3 +251,56 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Contact Form Handler
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.querySelector('input[name="name"]').value,
+            email: document.querySelector('input[name="email"]').value,
+            company: document.querySelector('input[name="company"]').value || '',
+            message: document.querySelector('textarea[name="message"]').value,
+            url: window.location.href,
+            webhookUrl: 'https://n8n.edbmotte.com/webhook/14760557-5bcd-4cfe-8cdc-5d107bae4062',
+            executionMode: 'production'
+        };
+        
+        try {
+            const response = await fetch('https://n8n.edbmotte.com/webhook/14760557-5bcd-4cfe-8cdc-5d107bae4062', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            const messageDiv = document.getElementById('formMessage');
+            
+            if (response.ok) {
+                messageDiv.textContent = 'Thank you! Your message has been sent successfully.';
+                messageDiv.style.backgroundColor = '#d4edda';
+                messageDiv.style.color = '#155724';
+                messageDiv.style.borderLeft = '4px solid #28a745';
+                messageDiv.style.display = 'block';
+                contactForm.reset();
+            } else {
+                messageDiv.textContent = 'There was an error sending your message. Please try again.';
+                messageDiv.style.backgroundColor = '#f8d7da';
+                messageDiv.style.color = '#721c24';
+                messageDiv.style.borderLeft = '4px solid #f5c6cb';
+                messageDiv.style.display = 'block';
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            const messageDiv = document.getElementById('formMessage');
+            messageDiv.textContent = 'There was an error sending your message. Please try again.';
+            messageDiv.style.backgroundColor = '#f8d7da';
+            messageDiv.style.color = '#721c24';
+            messageDiv.style.borderLeft = '4px solid #f5c6cb';
+            messageDiv.style.display = 'block';
+        }
+    });
+}
