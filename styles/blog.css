@@ -249,8 +249,8 @@
 
 /* Tech Specs Section */
 .tech-specs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     margin: 2rem 0;
 }
@@ -284,8 +284,7 @@
 
 .spec-item strong {
     color: var(--primary-color);
-    display: inline-block;
-    width: 100px;
+    display: inline;
 }
 
 /* Highlight Box */
@@ -913,6 +912,107 @@
     }
     
     .nordic-hero .hero-logo-block {
+        justify-content: center;
+    }
+}
+
+/* GIGA-42 Hero Section */
+.giga-hero {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #355d5d 0%, #82a5a2 50%, #1a1a1a 100%);
+    overflow: hidden;
+    color: white;
+}
+
+.giga-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.giga-hero .hero-overlay-pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.giga-hero .project-hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 4rem;
+}
+
+.giga-hero .hero-text-block {
+    flex: 1;
+    max-width: 600px;
+}
+
+.giga-hero .project-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -1px;
+}
+
+.giga-hero .project-subtitle {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    line-height: 1.6;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+}
+
+.giga-hero .hero-logo-block {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.giga-hero .hero-giga-logo {
+    width: clamp(150px, 20vw, 300px);
+    height: auto;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .giga-hero {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding: 3rem 1.5rem;
+    }
+    
+    .giga-hero .project-hero-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .giga-hero .hero-text-block {
+        max-width: 100%;
+    }
+    
+    .giga-hero .hero-logo-block {
         justify-content: center;
     }
 }
